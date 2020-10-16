@@ -1,0 +1,14 @@
+.column {
+  float: left;
+
+  padding: 10px;
+  height: 250px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.button1 {width: 325px;}

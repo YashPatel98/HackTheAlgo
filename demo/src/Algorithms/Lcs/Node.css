@@ -1,0 +1,93 @@
+:root {
+    --animdur: 1s;
+}
+.node{
+    width: 25px;
+    height: 25px;
+    outline: 1px solid grey;
+    display: inline-block;
+    opacity: 0;
+}
+.node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: var(--animdur);
+    animation-timing-function: ease-in;
+    animation-delay: var(--animdur)+1;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes visitedAnimation {
+    0% {
+      transform: scale(0.3);
+      background-color: rgba(66, 0, 0, 0.75);
+      opacity: 0;
+    }
+  
+    50% {
+      background-color: rgba(199, 0, 0, 0.75);
+      opacity: 0.5;
+    }
+  
+    75% {
+      background-color: rgba(248, 76, 76, 0.74);
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgba(250, 108, 108, 0.75);
+      opacity: 1;
+    }
+  }
+  .innum{
+    animation-name: show_number;
+    animation-duration: var(--animdur);
+    animation-timing-function: ease-out;
+    animation-delay: var(--animdur)+1;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    }
+    @keyframes show_number{
+        0%{opacity: 0;}
+        50% {
+          opacity: 0.5;
+        }
+        100%{opacity: 1;}
+    }
+    .node-header {
+      animation-name: headerAnimation;
+      animation-duration: var(--animdur);
+      animation-timing-function: ease-in;
+      animation-delay: 0s;
+      animation-direction: alternate;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+    }
+    
+    @keyframes headerAnimation {
+      0% {
+        transform: scale(0.3);
+        background-color: rgba(7, 82, 126, 0.75);
+        opacity: 0;
+      }
+    
+      50% {
+        background-color: rgba(7, 82, 126, 0.75);
+        opacity: 0.5;
+      }
+    
+      75% {
+        background-color: rgba(150, 212, 248, 0.705);
+      }
+    
+      100% {
+        transform: scale(1);
+        background-color: rgba(33, 203, 233, 0.75);
+        opacity: 1;
+      }
+    }

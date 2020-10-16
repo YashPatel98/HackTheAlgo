@@ -1,0 +1,116 @@
+:root {
+    --animdur: 1s;
+  }
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #E6E0E0;  
+}
+.code1 {
+    direction: flex;
+    flex-direction: row;
+    width: 350px;
+    margin: auto;
+    font-size: 1rem;
+}
+.code1 ul{
+    list-style-type: none;
+}
+
+.code1 li{
+    padding: 1% 0;
+    text-align: left;
+    background-color: #000000;
+    color: white;   
+}
+#grid {
+    margin: 4cm;
+    display: none;
+    width: 80vw;
+    max-width: 70vh;
+     height: 60vw;
+    max-height: 40vh;
+
+    font-size: 5rem;
+}
+
+.visited-line{
+    animation-name: vvli;
+    animation-duration: var(--animdur);
+    animation-iteration-count: 0.5;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-delay: var(--animdur) + 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+@keyframes vvli {
+    0%{background-color: rgba(255, 255, 255, 0.87);}
+    50%{background-color: rgba(97, 88, 173, 0.87);}
+    70%{background-color: rgba(37, 15, 228, 0.87);}
+    100%{background-color: rgba(48, 28, 226, 0.87);}
+}
+
+.visited-line1{
+    animation-name: vvli1;
+    animation-duration: var(--animdur);
+    animation-iteration-count: 0.5;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-delay: var(--animdur) + 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+@keyframes vvli1 {
+    0%{background-color: rgba(255, 255, 255, 0.75);}
+    50%{background-color: rgba(248, 76, 76, 0.74);}
+    70%{background-color: rgba(199, 0, 0, 0.75)}
+    100%{background-color: rgba(66, 0, 0, 0.75)}
+
+   }
+
+/* slider styling*/
+#speedy{
+    margin: 2% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+#speedy p{
+    margin: auto 5px;
+    font-size: 20px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 15px;
+    border-radius: 5px;  
+    background: white;
+    outline: none;
+    border: lightgray 1px solid;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #461abe;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #461abe;
+    cursor: pointer;
+  }

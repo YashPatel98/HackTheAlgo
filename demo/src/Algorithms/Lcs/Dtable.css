@@ -1,0 +1,61 @@
+:root{
+    --animdur: 1s;
+}
+.grid{
+    margin: 100px 0 0;
+}
+.checked {
+    animation-name: vvche;
+    animation-duration: var(--animdur);
+    animation-delay: var(--animdur) + 1;
+    opacity: 100;
+  }
+.visible{
+    opacity: 100;
+}
+  
+.current {
+    animation-name: vvli;
+    animation-duration: var(--animdur);
+    animation-delay: var(--animdur) + 1;
+    opacity: 100;
+}
+.code {
+    direction: flex;
+    flex-direction: row;
+    width: 350px;
+    margin: auto;
+    font-size: 1rem;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.code ul{
+    list-style-type: none;
+}
+
+.code li{
+    padding: 1% 0;
+    text-align: left;
+    background-color: #000000;
+    color: white;   
+}
+.visited-line{
+    animation-name: vvli;
+    animation-duration: var(--animdur);
+    animation-delay: var(--animdur) + 1;
+}
+@keyframes vvli {
+    0%{background-color: #ff6347;}
+    50%{background-color: #424242;}
+    70%{background-color: #ff6347;}
+    100%{background-color: #851400;}
+}
+@keyframes vvche {
+    0%{background-color: rgba(7, 82, 126, 0.75);}
+    50%{background-color: rgba(7, 82, 126, 0.75);}
+    70%{background-color: rgba(150, 212, 248, 0.705);}
+    100%{background-color: rgba(33, 203, 233, 0.75);}
+}
