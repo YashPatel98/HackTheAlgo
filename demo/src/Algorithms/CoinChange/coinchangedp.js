@@ -33,7 +33,7 @@ class CoinChangeDp extends React.Component {
         })
 
         var code=[]
-        var cx=800,cy=100;
+        var cx=900,cy=100;
         code.push(<Text id="c1" text="for (var i = 0; i < deno.length; i++) {" x={cx} y={cy} fontSize={20} />);
         code.push(<Text id="c2" text="    for (var j = 0; j <= V; j++) {" x={cx} y={cy+25} fontSize={20} />);
         code.push(<Text id="c3" text="       if (i == 0 || j == 0)" x={cx} y={cy+50} fontSize={20} />);
@@ -311,9 +311,9 @@ class CoinChangeDp extends React.Component {
 
                 <button onClick={() => this.play()}>play</button>
 
-                <br />
+                <br /><br /> <br />
 
-                <div style={{ marginLeft: "50px" }}>
+                <div style={{ marginLeft: "10%" }} >
                     
 
                     <Stage width={1600} height={400}>

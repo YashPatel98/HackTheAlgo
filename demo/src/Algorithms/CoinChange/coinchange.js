@@ -220,7 +220,7 @@ class CoinChange extends React.Component {
             return this.completed("no solution");
         }
         else if (this.state.i === 0 || (this.state.V- deno[this.state.i])===0) {
-            return this.completed("completed");
+            return this.completed(ans.length);
         }
     }
 
@@ -250,8 +250,8 @@ class CoinChange extends React.Component {
     }
     completed(s) {
 
-        
-        this.setState({ message: s })
+        this.setState({ message: "Minimum coins: " + s })
+        // this.setState({ message: s })
     }
 
     render() {
@@ -260,8 +260,8 @@ class CoinChange extends React.Component {
                 <button onClick={() => this.start(this.props.denomination, this.props.amount)}>start</button>
                 <button onClick={() => this.decide(this.state.deno, this.state.V)}>step</button>
                 <button onClick={() => this.play(this.state.deno, this.state.V)}>play</button>
-                <br />
-                <div style={{ width: "60%", float: "left" }} >
+                <br /> <br /> <br />
+                <div style={{ width: "50%", float: "left" }} >
                     <div style={{ marginLeft: "300px" }}>
                         <h3>  {this.state.msg1}</h3>
                         <br />
@@ -289,17 +289,15 @@ class CoinChange extends React.Component {
                  
                 </div>
                 <div style={{ marginLeft: "40%"}} >
-               <p style={{ fontSize: "20px"}}> <b>The coin change problem is finding the minimum number of coins from certain denominations that add up to a given amount of money
-              </b> </p>     <h2 style={{ textAlign: "center"}}><b>Algorithm</b></h2>
-             {/* <div style={{ height: "400px", width:"600px", borderStyle:"solid" ,marginLeft: "450px"}}> <img src={Image}/></div> */}
-             <div style={{ marginLeft: "30%"}} >
+              
+             
              <Stage width={700} height={300}>
                         <Layer id="layer">
                            
                             {this.state.code}
                         </Layer>
                     </Stage>
-          </div>
+          
             </div>
             </ div >
                 );

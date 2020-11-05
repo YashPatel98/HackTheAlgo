@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import CoinChangeDp from "./../../Algorithms/CoinChange/coinchangeinputdp";
 import CoinChangeGdy from "./../../Algorithms/CoinChange/coinchangeinput";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -46,7 +47,7 @@ function LinkTab(props) {
     <Tab
       component="a"
       onClick={(event) => {
-        event.preventDefault(); 
+        event.preventDefault();
       }}
       {...props}
     />
@@ -71,6 +72,7 @@ export default function NavTabs() {
 
   return (
     <div className={classes.root}>
+     
       <AppBar position="static">
         <Tabs
           variant="fullWidth"
@@ -84,16 +86,16 @@ export default function NavTabs() {
           aria-label="nav tabs example"
         >
           <LinkTab label="Greedy" href="/CoinChangeGdy" value={0} {...a11yProps(0)} />
-          <LinkTab label="Dynamic" href="/CoinChangeDp" value={1} {...a11yProps(1)}/>
+          <LinkTab label="Dynamic" href="/CoinChangeDp" value={1} {...a11yProps(1)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
         <h1>Greedy Coin Change Problem</h1>
-        <CoinChangeGdy/>
+        <CoinChangeGdy />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <h1>Dynamic Coin Change Problem</h1>
-        <CoinChangeDp/>
+        <CoinChangeDp />
       </TabPanel>
     </div>
   );
