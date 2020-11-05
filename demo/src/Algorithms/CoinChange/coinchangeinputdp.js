@@ -39,7 +39,7 @@ class CoinChangeInputDp extends React.Component {
                     <button onClick={() => { this.coinchangeinput(d.value, a.value); d.value = ''; a.value = ''; }}>
                         Submit
                 </button>
-                <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5;<br />amount-7" ></i><br />
+                <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5<br />amount-7<br/> Use comma to separate denomination." ></i><br />
                     <h3 style={{ marginLeft: "750px" }}>HELP</h3>
 
                     <ReactTooltip multiline={true} />

@@ -225,15 +225,16 @@ class Kruskal extends React.Component {
                     {/* <button onClick={() => this.start(4, [[1, 2, 3], [1, 3, 4], [1, 4, 1], [2, 4, 2]])}>start</button> */}
                     <button onClick={() => this.decide(this.state.connections)}>step</button>
                     <button onClick={() => this.play(this.state.connections)}>play</button>
-                    <div style={{ marginLeft: "800px" }}>
-                        <h2>  {this.state.message}</h2>
-                    </div>
-                    <Stage width={1600} height={800}>
+                    
+                    <Stage width={1600} height={400}>
                         <Layer id="layer">
                             {this.state.graph}
                             {this.state.lines}
                         </Layer>
                     </Stage>
+                    <div style={{ marginLeft: "100px" }}>
+                        <h2>  {this.state.message}</h2>
+                    </div>
 
                 </div>
             </div>
