@@ -52,14 +52,14 @@ export default class Fibonacci extends Component {
         document.getElementById(`box-${i - 1}`).className = "box box1-visited1";
         document.getElementById(`box-${i - 2}`).className = "box box2-visited2";
 
-        document.getElementById("first").classList.remove("visited-line");
+        document.getElementById("first").classList.remove("visited-fline");
         void document.getElementById("first").offsetWidth;
-        document.getElementById("second").classList.remove("visited-line");
+        document.getElementById("second").classList.remove("visited-fline");
         void document.getElementById("second").offsetWidth;
         document.getElementById("zero").classList.remove("visited-line1");
         void document.getElementById("zero").offsetWidth;
 
-        document.getElementById("first").classList.add("visited-line");
+        document.getElementById("first").classList.add("visited-fline");
         document.getElementById("second").classList.add("visited-line");
         document.getElementById("zero").classList.add("visited-line1");
       }, 1000 * i + spd);

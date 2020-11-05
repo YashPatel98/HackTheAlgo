@@ -27,18 +27,18 @@ export default function MediaCard() {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={require("./fiboEx.jpg")}
-          title="Fibonacci"
+          image={require("./KnapsackEx.png")}
+          title="Knapsack Problem"
           style={useStyles.media}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Fibonacci Sequence
+            Knapsack
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" onClick={() => history.push('/Fibonacci')}>
+        <Button size="small" color="primary" onClick={() => history.push('/Knapsack')}>
           Learn More
         </Button>
       </CardActions>

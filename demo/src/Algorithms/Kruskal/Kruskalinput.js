@@ -31,7 +31,7 @@ class KruskalInput extends React.Component {
         return (
             <div>
 
-                <div style={{ backgroundColor: "LightGray", height: "630px" }}>
+                <div>
                     <h1>Kruskal Algorithm</h1>
                 Enter number of nodes<input type="text" ref={node => { n = node; }} />
                 Edges<input type="text" ref={node => { edges = node; }} />
@@ -45,6 +45,6 @@ class KruskalInput extends React.Component {
         );
     }
 }
-
+//<div style={{ backgroundColor: "LightGray", height: "630px" }}>
 
 export default KruskalInput;

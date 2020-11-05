@@ -1,0 +1,39 @@
+:root{
+    --animdur: 4s;
+}
+.grid{  
+    margin: 100px 0 0;
+}
+.checked2 {
+    animation-name: vvche2;
+    animation-duration: var(--animdur);
+    animation-delay: var(--animdur) + 1;
+    opacity: 100;
+  }
+.visible{
+    opacity: 100;
+}
+  
+.current2 {
+    animation-name: vvli2;
+    animation-duration: var(--animdur);
+    animation-delay: var(--animdur) + 1;
+    opacity: 100;
+}
+.visited-line2{
+    animation-name: vvli2;
+    animation-duration: var(--animdur);
+    animation-delay: var(--animdur) + 1;
+}
+@keyframes vvli2 {
+    0%{background-color: #ff6347;}
+    50%{background-color: #424242;}
+    70%{background-color: #ff6347;}
+    100%{background-color: #851400;}
+}
+@keyframes vvche2 {
+    0%{background-color: rgba(7, 82, 126, 0.75);}
+    50%{background-color: rgba(7, 82, 126, 0.75);}
+    70%{background-color: rgba(150, 212, 248, 0.705);}
+    100%{background-color: rgba(33, 203, 233, 0.75);}
+}

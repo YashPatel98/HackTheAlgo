@@ -55,7 +55,7 @@ export default class Dtable extends Component {
   }
   animateLcs() {
     let root = document.documentElement;
-    let spd = (11 - document.getElementById("speed").value) / 6;
+    let spd = (document.getElementById("speed").value) / 6;
     root.style.setProperty("--animdur", `${spd}s`);
     this.setState({speed: spd});
     console.log(`the speed is ${spd}`);
@@ -114,7 +114,6 @@ export default class Dtable extends Component {
     console.log(nodes);
     return (
       <div>
-        <div>HackTheAlgo: Longest Common Subsequence</div>
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>string1: </label>
