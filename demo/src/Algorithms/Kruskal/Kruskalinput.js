@@ -34,12 +34,12 @@ class KruskalInput extends React.Component {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
                 
                 <div>
-                    <h1>Kruskal Algorithm</h1>
+                    <h1>Kruskal's Minimum Spanning Tree Algorithm </h1>
                     <p style={{ fontSize: "20px" }}> <b>Kruskal's algorithm is a minimum spanning tree algorithm that takes a graph as input and finds the subset of the edges of that graph which
 form a tree that includes every vertex and has the minimum sum of weights among all the trees that can be formed from the graph.
 </b> </p>
-                Number of nodes<input type="text" ref={node => { n = node; }} />
-                Edges<input type="text" ref={node => { edges = node; }} />
+                Number of nodes<input type="text" ref={node => { n = node; }} /> &nbsp;
+                Edges<input type="text" ref={node => { edges = node; }} /> &nbsp;
                     <button onClick={() => { this.graphinput(n.value, edges.value); n.value = ''; edges.value = ''; }}>
                         Submit
                 </button>

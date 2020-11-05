@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Node from "./Node";
 import "./Dtable.css";
+import ReactTooltip from 'react-tooltip'
 //import styled, { keyframes } from "styled-components";
 //import { bounce } from "react-animations";
 export default class Dtable extends Component {
@@ -57,22 +58,22 @@ export default class Dtable extends Component {
     let root = document.documentElement;
     let spd = (document.getElementById("speed").value) / 6;
     root.style.setProperty("--animdur", `${spd}s`);
-    this.setState({speed: spd});
+    this.setState({ speed: spd });
     console.log(`the speed is ${spd}`);
     for (let i = 1; i <= this.state.string1.length; i++) {
       for (let j = 1; j <= this.state.string2.length; j++) {
         setTimeout(() => {
           if (this.state.string1[i - 1] === this.state.string2[j - 1]) {
             document.getElementById(`node-${i}-${j}`).classList.remove("checked", "current");
-            document.getElementById(`node-${i-1}-${j-1}`).classList.remove("checked", "current");
-            document.getElementById(`node-${i-1}-${j}`).classList.remove("checked", "current");
-            document.getElementById(`node-${i}-${j-1}`).classList.remove("checked", "current");
+            document.getElementById(`node-${i - 1}-${j - 1}`).classList.remove("checked", "current");
+            document.getElementById(`node-${i - 1}-${j}`).classList.remove("checked", "current");
+            document.getElementById(`node-${i}-${j - 1}`).classList.remove("checked", "current");
 
-            document.getElementById(`node-${i-1}-${j}`).classList.add("visible");
-            document.getElementById(`node-${i}-${j-1}`).classList.add("visible");
-            document.getElementById(`node-${i-1}-${j-1}`).classList.add("visble");
+            document.getElementById(`node-${i - 1}-${j}`).classList.add("visible");
+            document.getElementById(`node-${i}-${j - 1}`).classList.add("visible");
+            document.getElementById(`node-${i - 1}-${j - 1}`).classList.add("visble");
 
-            document.getElementById(`node-${i-1}-${j-1}`).classList.add("checked");
+            document.getElementById(`node-${i - 1}-${j - 1}`).classList.add("checked");
             document.getElementById(`node-${i}-${j}`).classList.add("current");
 
             document.getElementById("firstif").classList.remove("visited-line")
@@ -84,17 +85,17 @@ export default class Dtable extends Component {
             document.getElementById("firstifline").classList.add("visited-line");
           } else {
             document.getElementById(`node-${i}-${j}`).classList.remove("checked", "current");
-            document.getElementById(`node-${i-1}-${j}`).classList.remove("checked", "current");
-            document.getElementById(`node-${i}-${j-1}`).classList.remove("checked", "current");
-            document.getElementById(`node-${i-1}-${j-1}`).classList.remove("checked", "current");
+            document.getElementById(`node-${i - 1}-${j}`).classList.remove("checked", "current");
+            document.getElementById(`node-${i}-${j - 1}`).classList.remove("checked", "current");
+            document.getElementById(`node-${i - 1}-${j - 1}`).classList.remove("checked", "current");
 
-            document.getElementById(`node-${i-1}-${j}`).classList.add("checked");
-            document.getElementById(`node-${i}-${j-1}`).classList.add("checked");
+            document.getElementById(`node-${i - 1}-${j}`).classList.add("checked");
+            document.getElementById(`node-${i}-${j - 1}`).classList.add("checked");
             document.getElementById(`node-${i}-${j}`).classList.add("current");
 
-            document.getElementById(`node-${i-1}-${j}`).classList.add("visible");
-            document.getElementById(`node-${i}-${j-1}`).classList.add("visible");
-            document.getElementById(`node-${i-1}-${j-1}`).classList.add("visble");
+            document.getElementById(`node-${i - 1}-${j}`).classList.add("visible");
+            document.getElementById(`node-${i}-${j - 1}`).classList.add("visible");
+            document.getElementById(`node-${i - 1}-${j - 1}`).classList.add("visble");
 
             document.getElementById("firstelse").classList.remove("visited-line")
             void document.getElementById("firstelse").offsetWidth;
@@ -102,42 +103,44 @@ export default class Dtable extends Component {
             void document.getElementById("firstelseline").offsetWidth;
             document.getElementById("firstelse").classList.add("visited-line");
             document.getElementById("firstelseline").classList.add("visited-line");
-          }            
+          }
         }, 1000 * spd);
         spd = spd + 2;
       }
     }
-        
+
   }
   render() {
     const { nodes } = this.state;
     console.log(nodes);
     return (
       <div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label>string1: </label>
+
+          string1
             <input
-              type="text"
-              name="string1"
-              value={this.state.string1}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <label>string2: </label>
+            type="text"
+            name="string1"
+            value={this.state.string1}
+            onChange={this.changeHandler}
+          />
+
+&nbsp;string2
             <input
-              type="text"
-              name="string2"
-              value={this.state.string2}
-              onChange={this.changeHandler}
-            />
-          </div>
-          <div>
-            <button type="submit" onClick={this.callGrid}>
-              generate
+            type="text"
+            name="string2"
+            value={this.state.string2}
+            onChange={this.changeHandler}
+          />
+ &nbsp;
+          <button type="submit" onClick={this.callGrid}>
+            Submit
             </button>
-          </div>
+          <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5<br />amount-7 <br/> Use comma to separate denomination." ></i><br />
+          <h3 style={{ marginLeft: "620px" }}>HELP</h3>
+
+          <ReactTooltip multiline={true} />
         </form>
         <div id="speedy">
           Speed

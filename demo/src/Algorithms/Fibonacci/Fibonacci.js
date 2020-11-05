@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Box from "./Box";
 import "./visualization.css";
+import ReactTooltip from 'react-tooltip'
 
 export default class Fibonacci extends Component {
   constructor(props) {
@@ -72,11 +73,13 @@ export default class Fibonacci extends Component {
     //console.log(boxes);
     return (
       <div>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
         <form onSubmit={this.handleSubmit}>
           <div>
-            <h1 className="center">Visualization Fibonacci Sequence</h1>
-
-            <b>Enter The Value : </b>
+            <h1 className="center">Fibonacci Sequence</h1>
+            <p style={{ fontSize: "20px" }}> <b>The Fibonacci sequence is a series of numbers where a number is the addition of the last two numbers, starting with 0, and 1. The Fibonacci Sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…
+</b> </p>
+            Enter The Value 
 
             <input
               className="center"
@@ -87,11 +90,15 @@ export default class Fibonacci extends Component {
               min="2"
               max="20"
             />
-          </div>
-          <div>
+     &nbsp;
             <button type="submit" onClick={this.callfunc} className="grid">
-              start
+              Submit
             </button>
+            <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5<br />amount-7 <br/> Use comma to separate denomination." ></i><br />
+          <h3 style={{ marginLeft: "370px" }}>HELP</h3>
+
+          <ReactTooltip multiline={true} />
+
           </div>
         </form>
         <div id="speedy">

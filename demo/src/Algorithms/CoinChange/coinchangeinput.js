@@ -34,8 +34,8 @@ class CoinChangeInput extends React.Component {
                 <div style={{ height: "700px" }}>
                     <p style={{ fontSize: "20px" }}> <b>The coin change problem is finding the minimum number of coins from certain denominations that add up to a given amount of money
               </b> </p>
-                Denominations<input type="text" ref={denomination => { d = denomination; }} />
-                Amount<input type="text" ref={amount => { a = amount; }} />
+                Denominations<input type="text" ref={denomination => { d = denomination; }} /> &nbsp;
+                Amount<input type="text" ref={amount => { a = amount; }} /> &nbsp;
                     <button onClick={() => { this.coinchangeinput(d.value, a.value); d.value = ''; a.value = ''; }}>
                         Submit
                 </button>
