@@ -38,9 +38,9 @@ class Contact extends React.Component {
                     <form name="form" id="form" ref={form => this.form = form} enctype="text/plain" target="hidden_iframe" onSubmit={this.onSubmit}>
                         <div class="row" style={{ marginLeft:"60px" }} >
                             <div class="column">
-                            <b>Name:</b>&nbsp; &nbsp; &nbsp; &nbsp;<input type="text" id="entry.1238625935" name="name" size="50" /><br /><br />
-                            <b>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <input type="text" id="entry.941955885" name="email" size="50" /><br /><br />
-                            <b>Message:</b> &nbsp;&nbsp;&nbsp;<textarea id="entry.1797898034" name="message" rows="4" cols="53"/><br /><br /><br /><br /><br /><br />
+                            <b>Name:</b>&nbsp; &nbsp; &nbsp; &nbsp;<input type="text" id="entry.1238625935" name="name" size="50" required/><br /><br />
+                            <b>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <input type="text" id="entry.941955885" name="email" size="50" required/><br /><br />
+                            <b>Message:</b> &nbsp;&nbsp;&nbsp;<textarea id="entry.1797898034" name="message" rows="4" cols="53"required/><br /><br /><br /><br /><br /><br />
                             </div>
                             <br />
                             <br />
