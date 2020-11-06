@@ -137,21 +137,10 @@ export default class Dtable extends Component {
             Submit
             </button>
           <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="Enter two strings, one in each text box,<br/>for which you want to find longest common subsequenece<br/>Ex:<br/>String 1: XMJYUZ<br/>String2: MZJAWXU<br/>Note: Strings are case-sensitive.<br/>Avoid using space."></i><br />
-          <h3 style={{ fontSize: "20px", marginLeft: "620px" }}>HELP</h3>
+          <h3 style={{ fontSize: "20px", marginLeft: "630px" }}>HELP</h3>
           <ReactTooltip multiline={true} />
         </form>
-        <div id="speedy">
-          Speed
-          <input
-            type="range"
-            id="speed"
-            className="slider"
-            name="points"
-            min="1"
-            max="10"
-            onChange={this.callGrid}
-          />
-        </div>
+       
         <table className="center">
           <tbody>
             <tr>
@@ -179,9 +168,7 @@ export default class Dtable extends Component {
               <td>
                 <div className="code">
                   <ul>
-                    <li>
-                      <h4>&nbsp;&nbsp;&nbsp;&nbsp;Dynamic Programming</h4>
-                    </li>
+                   
                     <li>
                       &nbsp;&nbsp;for (var i = 1; i &lt;= string1.length; i++)
                     </li>

@@ -101,19 +101,7 @@ export default class Fibonacci extends Component {
 
           </div>
         </form>
-        <div id="speedy">
-          Speed
-          <input
-            type="range"
-            id="speed"
-            className="slider"
-            name="points"
-            min="10"
-            max="20"
-            onChange={this.callfunc}
-          />
-        </div>
-        <div className="grid">
+               <div className="grid">
           {boxes.map((row, rowIdx) => {
             return <Box row1={rowIdx} data={boxes[rowIdx]}></Box>;
           })}

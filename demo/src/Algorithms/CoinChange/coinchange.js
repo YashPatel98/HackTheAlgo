@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stage, Layer, Text} from 'react-konva';
+import { Stage, Layer, Text, Rect} from 'react-konva';
 class CoinChange extends React.Component {
 
     constructor(props) {
@@ -17,6 +17,7 @@ class CoinChange extends React.Component {
             msg1: "",
             msg2: "",
             msg3: "",
+            background:[],
 
         };
     }
@@ -30,9 +31,11 @@ class CoinChange extends React.Component {
             i: deno.length - 1
         })
 
+        var background=[]
+        background.push( <Rect x={250} y={30} width={550} height={300} fill="black" />);
         var code=[]
         var cx=300,cy=50;
-        code.push(<Text id="c1" text="sort(denomination);" x={cx} y={cy} fontSize={20} fill='green'/>);
+        code.push(<Text id="c1" text="sort(denomination);" x={cx} y={cy} fontSize={20} fill='orange'/>);
         code.push(<Text id="c2" text="for(int i=n-1;i>denomination.length;i--){" x={cx} y={cy+25} fontSize={20} />);
         code.push(<Text id="c3" text="       while(Amount>=denomination[i]){" x={cx} y={cy+50} fontSize={20} />);
         code.push(<Text id="c4" text="           V -= denomination[i];" x={cx} y={cy+75} fontSize={20} />);
@@ -63,7 +66,8 @@ class CoinChange extends React.Component {
             amountanimate: a,
             msg1: "Amount Left",
             msg2: "Denominations Available",
-            code:code
+            code:code,
+            background:background
 
         })
 
@@ -98,10 +102,10 @@ class CoinChange extends React.Component {
         var b="for(int i="+i+";i>denomination.length;i--){";
         let newcode = this.state.code.map((item, idx) => {
             if (item.props.id === "c2") {
-                return <Text id={item.props.id} text={b} x={item.props.x} y={item.props.y} fontSize={20} fill='red'/>;
+                return <Text id={item.props.id} text={b} x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
             }
             else
-            return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+            return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
 
         })
         let newdenominationanimate = this.state.denominationanimate.map((item, idx) => {
@@ -154,7 +158,7 @@ class CoinChange extends React.Component {
           
            if(item.props.id === "c3")
             {
-                return <Text id={item.props.id} text={c} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+                return <Text id={item.props.id} text={c} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
             }
             else
             return item;
@@ -190,14 +194,14 @@ class CoinChange extends React.Component {
             let newcode = newcodefor.map((item, idx) => {
                 if (item.props.id === "c4" ) {
                    
-                    return <Text id={item.props.id} text="           V -= denomination[i];" x={item.props.x} y={item.props.y} fontSize={20} fill='red'/>;
+                    return <Text id={item.props.id} text="           V -= denomination[i];" x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
                 }
                 else if(item.props.id === "c5")
                 {
-                    return <Text id={item.props.id} text="           ans.add(denomination[i]);" x={item.props.x} y={item.props.y} fontSize={20} fill='red'/>;
+                    return <Text id={item.props.id} text="           ans.add(denomination[i]);" x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
                 }
                 else
-                return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+                return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
 
 
             })
@@ -205,7 +209,8 @@ class CoinChange extends React.Component {
 
             this.setState({
                 amountanimate: newamountanimate,
-                code:newcode
+                code:newcode,
+               
             })
             console.log(this.state.ans)
         }
@@ -293,7 +298,7 @@ class CoinChange extends React.Component {
              
              <Stage width={700} height={300}>
                         <Layer id="layer">
-                           
+                        {this.state.background}
                             {this.state.code}
                         </Layer>
                     </Stage>

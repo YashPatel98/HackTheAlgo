@@ -17,6 +17,7 @@ class CoinChangeDp extends React.Component {
             result: 0,
             flag:false,
             code:[],
+            background:[],
 
 
 
@@ -32,18 +33,21 @@ class CoinChangeDp extends React.Component {
             V: V,
         })
 
+        var background=[]
+        background.push( <Rect x={850} y={80} width={550} height={300} fill="black" />);
         var code=[]
+
         var cx=900,cy=100;
-        code.push(<Text id="c1" text="for (var i = 0; i < deno.length; i++) {" x={cx} y={cy} fontSize={20} />);
-        code.push(<Text id="c2" text="    for (var j = 0; j <= V; j++) {" x={cx} y={cy+25} fontSize={20} />);
-        code.push(<Text id="c3" text="       if (i == 0 || j == 0)" x={cx} y={cy+50} fontSize={20} />);
-        code.push(<Text id="c4" text="           dp[i][j] = j;" x={cx} y={cy+75} fontSize={20} />);
-        code.push(<Text id="c5" text="       else if(j<=deno[i])" x={cx} y={cy+100} fontSize={20} />);
-        code.push(<Text id="c6" text="           dp[i][j] = dp[i - 1][j];" x={cx} y={cy+125} fontSize={20} />);
-        code.push(<Text id="c7" text="       else" x={cx} y={cy+150} fontSize={20} />);
-        code.push(<Text id="c8" text="           dp[i][j] =min(dp[i - 1][j], dp[i][j -deno[i]] + 1);" x={cx} y={cy+175} fontSize={20} />);
-        code.push(<Text id="c9" text="     }" x={cx} y={cy+200} fontSize={20} />);
-        code.push(<Text id="c10" text=" }" x={cx} y={cy+225} fontSize={20} />);
+        code.push(<Text id="c1" text="for (var i = 0; i < deno.length; i++) {" x={cx} y={cy} fontSize={20} fill='white' />);
+        code.push(<Text id="c2" text="    for (var j = 0; j <= V; j++) {" x={cx} y={cy+25} fontSize={20} fill='white' />);
+        code.push(<Text id="c3" text="       if (i == 0 || j == 0)" x={cx} y={cy+50} fontSize={20} fill='white'/>);
+        code.push(<Text id="c4" text="           dp[i][j] = j;" x={cx} y={cy+75} fontSize={20} fill='white' />);
+        code.push(<Text id="c5" text="       else if(j<=deno[i])" x={cx} y={cy+100} fontSize={20} fill='white' />);
+        code.push(<Text id="c6" text="           dp[i][j] = dp[i - 1][j];" x={cx} y={cy+125} fontSize={20} fill='white'/>);
+        code.push(<Text id="c7" text="       else" x={cx} y={cy+150} fontSize={20}  fill='white'/>);
+        code.push(<Text id="c8" text="           dp[i][j] =min(dp[i - 1][j], dp[i][j -deno[i]] + 1);" x={cx} y={cy+175} fontSize={20} fill='white'/>);
+        code.push(<Text id="c9" text="     }" x={cx} y={cy+200} fontSize={20} fill='white' />);
+        code.push(<Text id="c10" text=" }" x={cx} y={cy+225} fontSize={20}  fill='white'/>);
 
 
         var rx = 150, ry = 100;
@@ -84,7 +88,8 @@ class CoinChangeDp extends React.Component {
         this.setState({
             denominationanimate: d,
             dp: b,
-            code:code
+            code:code,
+            background:background
 
         })
 
@@ -102,11 +107,11 @@ class CoinChangeDp extends React.Component {
 
         let newcodefor = this.state.code.map((item, idx) => {
             if (item.props.id === "c1") {
-                return <Text id={item.props.id} text={a} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+                return <Text id={item.props.id} text={a} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
             }
             else if(item.props.id === "c2")
             {
-                return <Text id={item.props.id} text={b} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+                return <Text id={item.props.id} text={b} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
             }
             else
             return item;
@@ -143,10 +148,10 @@ class CoinChangeDp extends React.Component {
             let newcode = newcodefor.map((item, idx) => {
                 if (item.props.id === "c4") {
                    
-                    return <Text id="c4" text="           dp[i][j] = j;" x={item.props.x} y={item.props.y} fontSize={20} fill='red'/>;
+                    return <Text id="c4" text="           dp[i][j] = j;" x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
                 }
                 else
-                return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+                return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
 
 
             })
@@ -186,10 +191,10 @@ class CoinChangeDp extends React.Component {
                 let newcode = newcodefor.map((item, idx) => {
                     if (item.props.id === "c6") {
                        
-                        return <Text id="c6" text="           dp[i][j] = dp[i - 1][j];" x={item.props.x} y={item.props.y} fontSize={20} fill='red'/>;
+                        return <Text id="c6" text="           dp[i][j] = dp[i - 1][j];" x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
                     }
                     else
-                    return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+                    return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
     
     
                 })
@@ -233,10 +238,10 @@ class CoinChangeDp extends React.Component {
                 let newcode = newcodefor.map((item, idx) => {
                     if (item.props.id === "c8") {
                        
-                        return <Text id="c8" text="           dp[i][j] = min(dp[i - 1][j], dp[i][j -deno[i]] + 1);" x={item.props.x} y={item.props.y} fontSize={20} fill='red'/>;
+                        return <Text id="c8" text="           dp[i][j] = min(dp[i - 1][j], dp[i][j -deno[i]] + 1);" x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
                     }
                     else
-                    return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='green'/>;
+                    return <Text id={item.props.id} text={item.props.text} x={item.props.x} y={item.props.y} fontSize={20} fill='white'/>;
                     
     
     
@@ -319,6 +324,7 @@ class CoinChangeDp extends React.Component {
                     <Stage width={1600} height={400}>
                         <Layer id="layer">
                             {this.state.denominationanimate}
+                            {this.state.background}
                             {this.state.code}
                         </Layer>
                     </Stage>

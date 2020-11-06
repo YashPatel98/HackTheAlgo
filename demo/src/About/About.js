@@ -27,7 +27,7 @@ class About extends Component {
           <div class="container">
 
             <a href="https://github.com/YashPatel98" style={{ color: "black" }}> <i class="fa fa-github" style={{ fontSize: "36px" }}></i></a>&nbsp;&nbsp;
-           <a href="" style={{ color: "#0e76a8 " }}> <i class="fa fa-linkedin" style={{ fontSize: "36px" }}></i></a>&nbsp;&nbsp;
+           <a href="https://www.linkedin.com/in/yash-patel-7373151a0" style={{ color: "#0e76a8 " }}> <i class="fa fa-linkedin" style={{ fontSize: "36px" }}></i></a>&nbsp;&nbsp;
            </div>
         </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
