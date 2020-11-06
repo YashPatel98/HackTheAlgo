@@ -44,7 +44,7 @@ form a tree that includes every vertex and has the minimum sum of weights among 
                         Submit
                 </button>
                 <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Number of nodes-5<br />Edges-1,2,3;2,3,4;1,4,6; <br/> 1,2,3; represent edge between node 1 and 2 with weight 3.<br/> Use single digit for weight.<br>Maximum 10 nodes graph is possible" ></i><br />
-                    <h3 style={{ marginLeft: "700px" }}>HELP</h3>
+                    <h3 style={{ fontSize: "20px", marginLeft: "700px" }}>HELP</h3>
 
                     <ReactTooltip multiline={true} />
                     <Kruskal nodes = {this.state.numberofnodes} connections={this.state.data}/>

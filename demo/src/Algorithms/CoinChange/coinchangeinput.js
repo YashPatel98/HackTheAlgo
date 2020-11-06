@@ -41,7 +41,7 @@ class CoinChangeInput extends React.Component {
                 </button>
 
                     <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5<br />amount-7 <br/> Use comma to separate denomination." ></i><br />
-                    <h3 style={{ marginLeft: "750px" }}>HELP</h3>
+                    <h3 style={{ fontSize: "20px", marginLeft: "750px" }}>HELP</h3>
 
                     <ReactTooltip multiline={true} />
 

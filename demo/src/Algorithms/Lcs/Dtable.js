@@ -125,21 +125,19 @@ export default class Dtable extends Component {
             value={this.state.string1}
             onChange={this.changeHandler}
           />
-
-&nbsp;string2
+          &nbsp;&nbsp;string2
             <input
             type="text"
             name="string2"
             value={this.state.string2}
             onChange={this.changeHandler}
           />
- &nbsp;
+          &nbsp;&nbsp;
           <button type="submit" onClick={this.callGrid}>
             Submit
             </button>
-          <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5<br />amount-7 <br/> Use comma to separate denomination." ></i><br />
-          <h3 style={{ marginLeft: "620px" }}>HELP</h3>
-
+          <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="Enter two strings, one in each text box,<br/>for which you want to find longest common subsequenece<br/>Ex:<br/>String 1: XMJYUZ<br/>String2: MZJAWXU<br/>Note: Strings are case-sensitive.<br/>Avoid using space."></i><br />
+          <h3 style={{ fontSize: "20px", marginLeft: "620px" }}>HELP</h3>
           <ReactTooltip multiline={true} />
         </form>
         <div id="speedy">
