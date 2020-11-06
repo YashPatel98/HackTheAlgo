@@ -32,15 +32,15 @@ class Contact extends React.Component {
             <div style={{ height: "670px" }}>
 
                 <br />  <br />  <br />
-                <h3 style={{ padding: 30 }}>Contact Us</h3>
+                <h1 style={{ padding: 30 }}>Contact Us</h1>
                 <br />
-                <div style={{ borderStyle: "inset", width: "40%", backgroundColor: "#79b6ca", marginLeft: "600px", padding: "40px" }}>
+                <div style={{ borderStyle: "inset", width: "40%", backgroundColor: "darkgrey", marginLeft: "600px", padding: "40px" }}>
                     <form name="form" id="form" ref={form => this.form = form} enctype="text/plain" target="hidden_iframe" onSubmit={this.onSubmit}>
                         <div class="row" style={{ marginLeft:"60px" }} >
                             <div class="column">
-                            <b>Name:</b>&nbsp; &nbsp;<input type="text" id="entry.1238625935" name="name" size="50" /><br /><br />
-                            <b>  Email:</b> <input type="text" id="entry.941955885" name="email" size="50" /><br /><br />
-                            <b>  Message:</b><textarea id="entry.1797898034" name="message" rows="4" cols="50"/><br /><br /><br /><br /><br /><br />
+                            <b>Name:</b>&nbsp; &nbsp; &nbsp; &nbsp;<input type="text" id="entry.1238625935" name="name" size="50" /><br /><br />
+                            <b>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <input type="text" id="entry.941955885" name="email" size="50" /><br /><br />
+                            <b>Message:</b> &nbsp;&nbsp;&nbsp;<textarea id="entry.1797898034" name="message" rows="4" cols="53"/><br /><br /><br /><br /><br /><br />
                             </div>
                             <br />
                             <br />

@@ -89,11 +89,12 @@ export default function NavTabs() {
           <LinkTab label="Dynamic" href="/CoinChangeDp" value={1} {...a11yProps(1)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
+     
+      <TabPanel value={value} index={0} style={{ backgroundColor: "rgb(214, 224, 224)"}}>
         <h1>Greedy Coin Change Problem</h1>
         <CoinChangeGdy />
       </TabPanel>
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={1} style={{ backgroundColor: "rgb(214, 224, 224)"}}>
         <h1>Dynamic Coin Change Problem</h1>
         <CoinChangeDp />
       </TabPanel>
