@@ -38,7 +38,7 @@ class CoinChange extends React.Component {
         code.push(<Text id="c1" text="sort(denomination);" x={cx} y={cy} fontSize={20} fill='orange'/>);
         code.push(<Text id="c2" text="for(int i=n-1;i>denomination.length;i--){" x={cx} y={cy+25} fontSize={20} />);
         code.push(<Text id="c3" text="       while(Amount>=denomination[i]){" x={cx} y={cy+50} fontSize={20} />);
-        code.push(<Text id="c4" text="           V -= denomination[i];" x={cx} y={cy+75} fontSize={20} />);
+        code.push(<Text id="c4" text="           Amount -= denomination[i];" x={cx} y={cy+75} fontSize={20} />);
         code.push(<Text id="c5" text="           ans.add(denomination[i]);" x={cx} y={cy+100} fontSize={20} />);
         code.push(<Text id="c6" text="       }" x={cx} y={cy+125} fontSize={20} />);
         code.push(<Text id="c7" text=" }" x={cx} y={cy+150} fontSize={20} />);
@@ -194,7 +194,7 @@ class CoinChange extends React.Component {
             let newcode = newcodefor.map((item, idx) => {
                 if (item.props.id === "c4" ) {
                    
-                    return <Text id={item.props.id} text="           V -= denomination[i];" x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
+                    return <Text id={item.props.id} text="           Amount -= denomination[i];" x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
                 }
                 else if(item.props.id === "c5")
                 {
