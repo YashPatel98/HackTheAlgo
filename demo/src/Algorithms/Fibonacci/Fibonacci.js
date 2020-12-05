@@ -94,7 +94,7 @@ export default class Fibonacci extends Component {
             <button type="submit" onClick={this.callfunc} className="grid">
               Submit
             </button>
-            <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5<br />amount-7 <br/> Use comma to separate denomination." ></i><br />
+            <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Enter Value-5<br />Minimum value allowed is 2.<br />Maximum value allowed is 20" ></i><br />
           <h3 style={{ fontSize: "20px", marginLeft: "320px" }}>HELP</h3>
 
           <ReactTooltip multiline={true} />

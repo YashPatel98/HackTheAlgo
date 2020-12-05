@@ -156,7 +156,7 @@ export default class Knapsack extends Component {
           <button type="submit" onClick={() => { this.graphinput(n.value, edges.value, edges1.value) }}>
             Submit
     </button>
-          <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Denomination-1,2,5<br />amount-7 <br/> Use comma to separate denomination." ></i><br />
+          <i class="fa fa-lightbulb-o" style={{ fontSize: "50px", marginLeft: "5%" }} data-tip="INPUT FORMAT <br /> Knapsack Capacity-9<br />Weight-4,5,6 <br/>Value-2,3,5" ></i><br />
           <h3 style={{ fontSize: "20px", marginLeft: "950px" }}>HELP</h3>
 
           <ReactTooltip multiline={true} />
