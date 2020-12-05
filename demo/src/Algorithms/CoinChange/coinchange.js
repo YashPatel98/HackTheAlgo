@@ -99,7 +99,7 @@ class CoinChange extends React.Component {
         }
 
          var i = this.state.i;
-        var b="for(int i="+i+";i>denomination.length;i--){";
+        var b="for(int i="+i+";i>=0;i--){";
         let newcode = this.state.code.map((item, idx) => {
             if (item.props.id === "c2") {
                 return <Text id={item.props.id} text={b} x={item.props.x} y={item.props.y} fontSize={20} fill='orange'/>;
@@ -139,9 +139,9 @@ class CoinChange extends React.Component {
         if (this.state.V !== 0 && this.state.i === -1) {
             return this.completed("no solution");
         }
-        else if (this.state.i === 0 && this.state.V === 0) {
-            return this.completed("completed");
-        }
+        // else if (this.state.i === 0 && this.state.V === 0) {
+        //     return this.completed("completed");
+        // }
 
     }
 
@@ -224,7 +224,7 @@ class CoinChange extends React.Component {
         if (this.state.V !== 0 && this.state.i === -1) {
             return this.completed("no solution");
         }
-        else if (this.state.i === 0 || (this.state.V- deno[this.state.i])===0) {
+        else if (this.state.i == 0 || (this.state.V- deno[this.state.i])==0) {
             return this.completed(ans.length);
         }
     }
@@ -239,6 +239,7 @@ class CoinChange extends React.Component {
         }
     }
     play(deno, V) {
+        
         
             if (this.state.flag === true) {
                 this.findMinInnerLoop(deno, V);
