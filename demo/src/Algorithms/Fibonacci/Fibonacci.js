@@ -150,3 +150,4 @@ export default class Fibonacci extends Component {
 }
 //<p><li>for programe click here <a href="https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/" title="Fibonacci Programme ">Fibonacci Programme</a></li></p>
 //<p><li>for application of fibonacci click here <a href="https://www.youtube.com/watch?v=l3-1pO4uGGE" title="Fibonacci Application ">Fibonacci Application</a></li></p>
+//yash
